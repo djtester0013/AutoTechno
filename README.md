@@ -10,7 +10,7 @@ The project demonstrates how both languages can coexist in the same environment,
 Features
 Combined source code in Java and Kotlin
 Practical examples of interoperability between both languages
-Integration with modern Android libraries
+Integration with contemporary Android libraries
 Modular and easily extensible architecture
 Ideal for developers migrating projects from Java to Kotlin
 
@@ -25,7 +25,7 @@ Optimized performance: Kotlin’s concise and safe syntax reduces bugs that coul
 
 Better code maintenance: Interoperability allows developers to add new features (like equalizers, smart playlists, or streaming) without rewriting the entire codebase.
 
-Modern library support: Kotlin integrates smoothly with Android’s latest APIs, such as ExoPlayer, improving stability and audio buffer management.
+Contemporary library support: Kotlin integrates smoothly with Android’s latest APIs, such as ExoPlayer, improving stability and audio buffer management.
 
 Lower resource usage: Kotlin’s compiler optimizations make reading, decoding, and playback operations more efficient.
 

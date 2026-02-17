@@ -13,9 +13,9 @@ name: "CodeQL Advanced"
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
   schedule:
     - cron: '17 15 * * 1'
 
@@ -44,6 +44,10 @@ jobs:
       matrix:
         include:
         - language: java-kotlin
+          build-mode: autobuild
+        - language: javascript-typescript
+          build-mode: autobuild
+        - language: python
           build-mode: autobuild
         # CodeQL supports the following values keywords for 'language': 'actions', 'c-cpp', 'csharp', 'go', 'java-kotlin', 'javascript-typescript', 'python', 'ruby', 'rust', 'swift'
         # Use `c-cpp` to analyze code written in C, C++ or both
@@ -91,7 +95,8 @@ jobs:
           'your code, for example:'
         echo '  make bootstrap'
         echo '  make release'
-        exit 1
+        # Replace the exit below with actual build commands when using manual mode.
+        # exit 1
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v4

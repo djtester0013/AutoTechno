@@ -48,7 +48,7 @@ ext {
 
     androidMaterialVersion = '1.0.0'
 
-    exoPlayerVersion = '2.10.4'
+    exoPlayerVersion = '2.19.1'
 }
 
 dependencies {

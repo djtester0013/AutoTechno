@@ -49,11 +49,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # Setup Java for the build - JDK 11 is required for Android Gradle Plugin 3.5.1+
+    # Setup Java for the build - JDK 17 is required for Android SDK Manager compatibility
     - name: Set up JDK
       uses: actions/setup-java@v3
       with:
-        java-version: '11'
+        java-version: '17'
         distribution: 'temurin'
 
     # Setup Android SDK

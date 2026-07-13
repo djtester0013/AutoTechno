@@ -77,6 +77,8 @@ jobs:
 
     - name: Run Gradle build
       run: ./gradlew clean assembleDebug --no-daemon
+      env:
+        GRADLE_OPTS: "-Dkotlin.gradle.plugin.statistics=false"
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v4

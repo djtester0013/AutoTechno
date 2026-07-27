@@ -24,6 +24,15 @@ allprojects {
     }
 }
 
+// Disable Kotlin build service to prevent BuildFlowService serialization errors
+gradle.projectsEvaluated {
+    rootProject.allprojects { project ->
+        project.ext.findProperty('kotlin.gradle.plugin.statistics')?.with { _ ->
+            System.setProperty('kotlin.gradle.plugin.statistics', 'false')
+        }
+    }
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

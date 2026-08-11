@@ -24,14 +24,10 @@ allprojects {
     }
 }
 
-// Disable Kotlin build service to prevent BuildFlowService serialization errors
-gradle.projectsEvaluated {
-    rootProject.allprojects { project ->
-        project.ext.findProperty('kotlin.gradle.plugin.statistics')?.with { _ ->
-            System.setProperty('kotlin.gradle.plugin.statistics', 'false')
-        }
-    }
-}
+// NOTE: Removed a late-time runtime workaround that attempted to disable
+// Kotlin build statistics during project evaluation. Setting the property
+// in gradle.properties ensures it is available early in the Gradle JVM and
+// prevents BuildFlowService from being registered/serialized.
 
 task clean(type: Delete) {
     delete rootProject.buildDir

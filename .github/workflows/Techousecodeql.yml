@@ -60,9 +60,11 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v2
 
-    # Setup Gradle with caching
+    # Setup Gradle with caching disabled to avoid cache corruption issues
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+      with:
+        cache-disabled: true
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL

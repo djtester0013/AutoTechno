@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.9.23'
+    ext.kotlin_version = '1.9.24'
 
     repositories {
         google()
@@ -21,15 +21,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-    }
-}
-
-// Disable Kotlin build service to prevent BuildFlowService serialization errors
-gradle.projectsEvaluated {
-    rootProject.allprojects { project ->
-        project.ext.findProperty('kotlin.gradle.plugin.statistics')?.with { _ ->
-            System.setProperty('kotlin.gradle.plugin.statistics', 'false')
-        }
     }
 }
 

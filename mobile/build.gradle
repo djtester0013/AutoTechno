@@ -4,6 +4,10 @@ plugins {
     id 'kotlin-kapt'
 }
 
+ext {
+    buildFlowServiceProperty = ''
+}
+
 android {
     compileSdkVersion 34
     buildToolsVersion '34.0.0'

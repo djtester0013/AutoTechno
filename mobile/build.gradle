@@ -3,7 +3,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 ext {
-    buildFlowServiceProperty = ''
+    buildFlowServiceProperty = project.hasProperty('buildFlowServiceProperty') ? 
+        project.property('buildFlowServiceProperty') : 'false'
 }
 
 android {

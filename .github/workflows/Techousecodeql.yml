@@ -78,7 +78,7 @@ jobs:
       run: chmod +x ./gradlew
 
     - name: Run Gradle build
-      run: ./gradlew clean assembleDebug --no-daemon -DbuildFlowServiceProperty=false
+      run: ./gradlew clean assembleDebug --no-daemon -PbuildFlowServiceProperty=false
       env:
         GRADLE_OPTS: "-Dkotlin.gradle.plugin.statistics=false"
 

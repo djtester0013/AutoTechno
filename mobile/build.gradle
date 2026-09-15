@@ -3,6 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 ext {
+    buildFlowServiceProperty = false
     anko_version = '0.10.8'
 
     androidKtxVersion = '1.12.0'

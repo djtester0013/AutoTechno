@@ -59,6 +59,12 @@ jobs:
     # Setup Android SDK
     - name: Setup Android SDK
       uses: android-actions/setup-android@v2
+      with:
+        packages: |
+          tools
+          platform-tools
+          build-tools;35.0.0
+          platforms;android-35
 
     # Setup Gradle with caching disabled to avoid cache corruption issues
     - name: Setup Gradle
